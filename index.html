@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NuPortal</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="top">
+      <h1><span class="highlight">Nu</span>Portal</h1>
+      <hr>
+      <p>
+        Welcome to <b><span class="highlight">Nu</span>Portal</b>, the home of
+        the nu metal music subgenre.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Listener Form</h2>
+      <form id="listener-form" method="post">
+        <div class="card">
+          <label>Favourite band:</label>
+          <input type="text" name="favourite-band" required>
+        </div>
+        <div class="card">
+          <label>
+            Choose one of the following bands to listen to:
+          </label>
+          <div class="radio">
+            <input id="radio-1" type="radio" name="band-choice"
+              value="Korn" required>
+            <label for="radio-1" class="radio-label">Korn</label>
+          </div>
+          <div class="radio">
+            <input id="radio-2" type="radio" name="band-choice"
+              value="Slipknot" required>
+            <label for="radio-2" class="radio-label">Slipknot</label>
+          </div>
+          <div class="radio">
+            <input id="radio-3" type="radio" name="band-choice"
+              value="Linkin Park" required>
+            <label for="radio-3" class="radio-label">Linkin Park</label>
+          </div>
+        </div>
+        <div class="card">
+          <label>
+            In which year do you believe nu metal has peaked so far?
+          </label>
+          <select class="year" name="peak-year" required>
+            <option value="" disabled selected>Select Year</option>
+          </select>
+        </div>
+        <div class="controls">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </form>
+      <div id="listener-form-results" hidden="true">
+        Your favourite band is
+        <span class="response" id="favourite-band"></span>! You chose
+        <span class="response" id="band-choice"></span> from our available band
+        options, and gave the year <span class="response" id="peak-year"></span>
+        as your nu metal year of choice.
+        <div class="controls">
+          <button id="reload">Reload</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
