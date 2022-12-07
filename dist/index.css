@@ -9,11 +9,14 @@ body {
         'Helvetica Neue', sans-serif;
     background-color: #eff1f5;
     color: var(--color-foreground);
+    width: 100%;
+    height: 100%;
+    min-width: min-content;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: min-content;
 }
 
 div#top {
@@ -40,6 +43,7 @@ div#top hr {
     border-radius: 8px;
     box-shadow: 10px 10px 16px #9ca0b0;
     transition: all 400ms ease;
+    flex-grow: 1;
 }
 
 body > * .card:hover {
